@@ -1,7 +1,9 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-
+'''
+建立streamlit和本地vscode的自动连接
+'''
 chart_data = pd.DataFrame(
    {
        "col1": np.random.randn(20),
