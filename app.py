@@ -4,7 +4,7 @@ import numpy as np
 '''
 建立streamlit和本地vscode的自动连接
 
-20231024测试
+20231024测试success
 '''
 chart_data = pd.DataFrame(
    {
