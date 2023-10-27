@@ -1,11 +1,7 @@
 import streamlit as st
-st.json({
-    'foo': 'bar',
-    'baz': 'boz',
-    'stuff': [
-        'stuff 1',
-        'stuff 2',
-        'stuff 3',
-        'stuff 5',
-    ],
-})
+import pandas as pd
+import numpy as np
+
+chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
+
+st.scatter_chart(chart_data)
