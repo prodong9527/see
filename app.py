@@ -11,5 +11,5 @@ add_radio=st.sidebar.radio(
     "select",("one","two","three")
 )
 
-df=pd.DataFrame(np.random.randn(50,8),columns=("第d%列" % i for i in range(8)))
+df=pd.DataFrame(np.random.randn(50,20),columns=("第d%列" % i for i in range(20)))
 st.dataframe(df.style.highlight_max(axis=0))
