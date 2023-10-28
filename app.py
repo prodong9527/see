@@ -7,9 +7,9 @@ muti='''
 '''
 st.markdown(muti)
 
-st.sidebar.spinner("Loading...")
-time.sleep(5)
-st.success("Done!")
+add_radio=st.sidebar.radio(
+    "select",("one","two","three")
+)
 
 df=pd.DataFrame(np.random.randn(50,8),columns=("第d%列" % i for i in range(8)))
 st.dataframe(df.style.highlight_max(axis=0))
