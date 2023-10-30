@@ -1,7 +1,7 @@
 import streamlit as st
 
 if "OPENAI_API_KEY" not in st.session_state:
-    st.session_state["OPENAI_API_KEY"] = "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"
+    st.session_state["OPENAI_API_KEY"] = ""
 
 st.set_page_config(page_title="OpenAI Settings", layout="wide")
 
