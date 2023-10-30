@@ -14,15 +14,9 @@ if "OPENAI_API_KEY" not in st.session_state:
 elif st.session_state["OPENAI_API_KEY"] != "":
     chat = ChatOpenAI(openai_api_key=st.session_state["OPENAI_API_KEY"])
 
-if "PINECONE_API_KEY" not in st.session_state:
-    st.session_state["PINECONE_API_KEY"] = ""
+st.set_page_config(page_title="虚拟人计划1.0", layout="wide")
 
-if "PINECONE_ENVIRONMENT" not in st.session_state:
-    st.session_state["PINECONE_ENVIRONMENT"] = ""
-
-st.set_page_config(page_title="Welcome to ASL", layout="wide")
-
-st.title("🤠 Welcome to ASL")
+st.title("🤠 小团团随时为萍萍大人服务")
 
 if "messages" not in st.session_state:
     st.session_state["messages"] = []
