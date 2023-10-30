@@ -6,7 +6,6 @@ from langchain.schema import (
     SystemMessage
 )
 
-<<<<<<< HEAD
 # Initialize the ChatOpenAI object
 chat = None
 
