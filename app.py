@@ -14,7 +14,7 @@ if "OPENAI_API_KEY" not in st.session_state:
 elif st.session_state["OPENAI_API_KEY"] != "":
     chat = ChatOpenAI(openai_api_key=st.session_state["OPENAI_API_KEY"])
 
-st.set_page_config(page_title="虚拟人计划1.0", layout="wide")
+st.set_page_config(page_title="夜风习习", layout="wide")
 
 # st.title("🤠"+st.secrets["title_text"])
 st.title(st.secrets["title_text"])
