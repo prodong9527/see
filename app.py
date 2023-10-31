@@ -16,7 +16,7 @@ elif st.session_state["OPENAI_API_KEY"] != "":
 
 st.set_page_config(page_title="虚拟人计划1.0", layout="wide")
 
-st.title("🤠 小团团随时为萍萍大人服务")
+st.title("🤠"+st.secrets["title_text"])
 
 if "messages" not in st.session_state:
     st.session_state["messages"] = []
@@ -37,7 +37,7 @@ if chat:
             st.session_state["messages"].append(HumanMessage(content=prompt))
             with st.chat_message("user"):
                 st.markdown(prompt)
-            ai_message = chat([HumanMessage(content=prompt)])
+ 
             st.session_state["messages"].append(ai_message)
             with st.chat_message("assistant"):
                 st.markdown(ai_message.content)
