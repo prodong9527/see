@@ -16,7 +16,8 @@ elif st.session_state["OPENAI_API_KEY"] != "":
 
 st.set_page_config(page_title="虚拟人计划1.0", layout="wide")
 
-st.title("🤠"+st.secrets["title_text"])
+# st.title("🤠"+st.secrets["title_text"])
+st.title(st.secrets["title_text"])
 
 if "messages" not in st.session_state:
     st.session_state["messages"] = []
