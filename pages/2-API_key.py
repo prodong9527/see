@@ -7,8 +7,7 @@ st.set_page_config(page_title="OpenAI Settings", layout="wide")
 
 st.title("OpenAI Settings")
 
-# openai_api_key = st.text_input("API Key", value=st.session_state["OPENAI_API_KEY"], max_chars=None, key=None, type='password')
-openai_api_key = st.text_input("API Key", value=st.secrets["key"], max_chars=None, key=None, type='password')
+openai_api_key = st.text_input("API Key", value=st.session_state["OPENAI_API_KEY"], max_chars=None, key=None, type='password')
 
 saved = st.button("Save")
 
