@@ -14,7 +14,7 @@ if "OPENAI_API_KEY" not in st.session_state:
 elif st.session_state["OPENAI_API_KEY"] != "":
     chat = ChatOpenAI(openai_api_key=st.session_state["OPENAI_API_KEY"])
 
-st.set_page_config(page_title="🐠夜风习习", layout="wide")
+st.set_page_config(page_title="🐠夜风习习", layout ="wide")
 
 st.title("🤠"+st.secrets["title_text"])
 # st.title(st.secrets["title_text"])
@@ -38,7 +38,7 @@ if chat:
             st.session_state["messages"].append(HumanMessage(content=prompt))
             with st.chat_message("user"):
                 st.markdown(prompt)
- 
+            ai_message = chat([HumanMessage(content=prompt)])
             st.session_state["messages"].append(ai_message)
             with st.chat_message("assistant"):
                 st.markdown(ai_message.content)
