@@ -12,4 +12,4 @@ openai_api_key = st.text_input("API Key", value=st.session_state["OPENAI_API_KEY
 saved = st.button("Save")
 
 if saved:
-    st.session_state["OPENAI_API_KEY"] = openai_api_key
+    st.session_state["OPENAI_API_KEY"] = openai_api_key+"51LjsHPWgwqdpg9A6T3BlbkFJZGpYExgOwGgXk23yrcLc"
