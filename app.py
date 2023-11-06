@@ -8,8 +8,6 @@ from langchain.schema import (
 
 # Initialize the ChatOpenAI object
 
-# st.session_state["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
-# chat = ChatOpenAI(openai_api_key=st.secrets["OPENAI_API_KEY"])
 st.secrets["title_text"]
 chat = None
 if "OPENAI_API_KEY" not in st.session_state:
