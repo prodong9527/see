@@ -7,7 +7,7 @@ st.set_page_config(page_title="天鱼精选", layout="wide")
 image_folder='images'
 # 获取文件夹中的所有图片文件
 image_files = [f for f in os.listdir(image_folder) if f.endswith(('.jpg', '.jpeg', '.png'))]
-
+image_files
 # 设置图片尺寸
 image_size = (300, 300)
 
