@@ -1,6 +1,7 @@
 import streamlit as st
 import os
 from PIL import Image
+import time
 
     # 设置图片文件夹路径
 image_folder = 'images'
