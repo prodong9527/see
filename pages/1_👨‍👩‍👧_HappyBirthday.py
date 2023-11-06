@@ -4,7 +4,10 @@ from PIL import Image
 
 st.set_page_config(page_title="幸福记忆", layout="wide")
 
-st.subheader('这里有永远留在我们记忆中的幸福', divider='rainbow')
+st.markdown("## 这里有永远留在我们记忆里的幸福 &mdash;\
+            :tulip::cherry_blossom::rose::hibiscus::sunflower::blossom: \
+            --- " 
+            )
 image_folder='images'
 # 获取文件夹中的所有图片文件
 image_files = [f for f in os.listdir(image_folder) if f.endswith(('.jpg', '.jpeg', '.png'))]
