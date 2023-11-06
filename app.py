@@ -36,7 +36,6 @@ if chat:
         prompt = st.chat_input("Can I help you...")
         if prompt:
             st.session_state["messages"].append(HumanMessage(content=prompt))
-            
             with st.chat_message("user"):
                 st.markdown(prompt)
             ai_message = chat([HumanMessage(content=prompt)])
