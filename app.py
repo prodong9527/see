@@ -7,14 +7,15 @@ from langchain.schema import (
 )
 
 # Initialize the ChatOpenAI object
-# chat = None
-st.session_state["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
-chat = ChatOpenAI(openai_api_key=st.secrets["OPENAI_API_KEY"])
+
+# st.session_state["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
+# chat = ChatOpenAI(openai_api_key=st.secrets["OPENAI_API_KEY"])
 st.secrets["title_text"]
-# if "OPENAI_API_KEY" not in st.session_state:
-#     st.session_state["OPENAI_API_KEY"] = ""
-# elif st.session_state["OPENAI_API_KEY"] != "":
-#     chat = ChatOpenAI(openai_api_key=st.session_state["OPENAI_API_KEY"])
+chat = None
+if "OPENAI_API_KEY" not in st.session_state:
+    st.session_state["OPENAI_API_KEY"] = ""
+elif st.session_state["OPENAI_API_KEY"] != "":
+    chat = ChatOpenAI(openai_api_key=st.session_state["OPENAI_API_KEY"])
 
 st.set_page_config(page_title="🐠夜风习习", layout ="wide")
 
