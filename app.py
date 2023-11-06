@@ -7,7 +7,7 @@ from langchain.schema import (
 )
 
 # Initialize the ChatOpenAI object
-chat = None
+# chat = None
 st.session_state["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 chat = ChatOpenAI(openai_api_key=st.secrets["OPENAI_API_KEY"])
 
