@@ -1,7 +1,6 @@
 import streamlit as st
 import os
 from PIL import Image
-import time
 
 image_folder='images'
 # 获取文件夹中的所有图片文件
