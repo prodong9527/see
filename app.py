@@ -24,7 +24,7 @@ if "messages" not in st.session_state:
 
 if chat:
     with st.container():
-        st.header("Chat with GPT")
+        # st.header("Chat with GPT")
 
         for message in st.session_state["messages"]:
             if isinstance(message, HumanMessage):
