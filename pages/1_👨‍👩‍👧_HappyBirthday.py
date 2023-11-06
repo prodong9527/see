@@ -16,8 +16,7 @@ image_index = 0
 for image_index in image_files:
     # 读取并调整图片尺寸
     image = Image.open(os.path.join(image_folder, image_index))
-    image = image.width(600)
     
     # 显示图片
-    st.image(image)
+    st.image(image,width=600,caption=image_index)
 
