@@ -2,5 +2,5 @@ import streamlit as st
 from PIL import Image
 
 
-image=Image.open('/images/IMG_20170513_082907.jpg')
+image=Image.open('IMG_20150707_211203_D1D.jpg')
 st.image(image,caption='wife')
