@@ -35,13 +35,15 @@ if chat:
                     st.markdown(message.content)
         prompt = st.chat_input("Can I help you...")
         if prompt:
-            st.session_state["messages"].append(HumanMessage(content=prompt_l+prompt))
+            st.session_state["messages"].append(HumanMessage(content=prompt))
+            st.session_state["messages"]
+            st.session_state["messages"].type()
             with st.chat_message("user"):
                 st.markdown(prompt)
-            ai_message = chat([HumanMessage(content=prompt_l+prompt)])
-            st.session_state["messages"].append(ai_message)
-            with st.chat_message("assistant"):
-                st.markdown(ai_message.content)
+            # ai_message = chat([HumanMessage(content=prompt_l+prompt)])
+            # st.session_state["messages"].append(ai_message)
+            # with st.chat_message("assistant"):
+            #     st.markdown(ai_message.content)
 else:
     with st.container():
         st.warning("Please set your OpenAI API key in the settings page.")
