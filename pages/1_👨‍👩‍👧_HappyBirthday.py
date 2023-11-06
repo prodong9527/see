@@ -18,5 +18,5 @@ for image_index in image_files:
     image = Image.open(os.path.join(image_folder, image_index))
     
     # 显示图片
-    st.image(image,width=600,caption=image_index)
+    st.image(image,width=380,caption=image_index.split(".")[0])
 
