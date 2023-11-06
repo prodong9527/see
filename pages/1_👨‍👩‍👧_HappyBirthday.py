@@ -3,9 +3,7 @@ import os
 from PIL import Image
 import time
 
-    # 设置图片文件夹路径
-image_folder = 'images'
-
+image_folder='images'
 # 获取文件夹中的所有图片文件
 image_files = [f for f in os.listdir(image_folder) if f.endswith(('.jpg', '.jpeg', '.png'))]
 
@@ -14,9 +12,6 @@ image_size = (300, 300)
 
 # 初始化图片索引
 image_index = 0
-
-# 设置走马灯间隔时间（秒）
-interval = 5
 
 # 循环播放图片
 while True:
@@ -30,5 +25,8 @@ while True:
     # 更新图片索引
     image_index = (image_index + 1) % len(image_files)
     
-    # 等待指定的时间间隔
-    st.time.sleep(interval)
+    # 等待用户按键，然后继续播放下一张图片
+    if st.button('Next'):
+        continue
+    else:
+        break
