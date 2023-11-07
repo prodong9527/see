@@ -11,7 +11,7 @@ from langchain.schema import (
 chat = None
 # prompt_l="你叫'小团团'，现在你正在为'萍萍主人'服务，11月6日是她的生日，你在回答问题前请先介绍自己。//"
 if "OPENAI_API_KEY" not in st.session_state:
-    st.session_state["OPENAI_API_KEY"] = "sk-qmG"
+    st.session_state["OPENAI_API_KEY"] = ""
 elif st.session_state["OPENAI_API_KEY"] != "":
     chat = ChatOpenAI(openai_api_key=st.session_state["OPENAI_API_KEY"])
 
@@ -24,7 +24,7 @@ if "messages" not in st.session_state:
 
 if chat:
     with st.container():
-        # st.header("Chat with GPT")
+        st.header("Chat with GPT")
 
         for message in st.session_state["messages"]:
             if isinstance(message, HumanMessage):
@@ -33,7 +33,7 @@ if chat:
             elif isinstance(message, AIMessage):
                 with st.chat_message("assistant"):
                     st.markdown(message.content)
-        prompt = st.chat_input("Can I help you...")
+        prompt = st.chat_input("Type something...")
         if prompt:
             st.session_state["messages"].append(HumanMessage(content=prompt))
             with st.chat_message("user"):
@@ -42,8 +42,6 @@ if chat:
             st.session_state["messages"].append(ai_message)
             with st.chat_message("assistant"):
                 st.markdown(ai_message.content)
-            st.session_state["messages"]
 else:
     with st.container():
         st.warning("Please set your OpenAI API key in the settings page.")
-
