@@ -7,25 +7,22 @@ from langchain.schema import (
 )
 
 # Initialize the ChatOpenAI object
-
 chat = None
-# prompt_l="你叫'小团团'，现在你正在为'萍萍主人'服务，11月6日是她的生日，你在回答问题前请先介绍自己。//"
+
 if "OPENAI_API_KEY" not in st.session_state:
     st.session_state["OPENAI_API_KEY"] = ""
 elif st.session_state["OPENAI_API_KEY"] != "":
     chat = ChatOpenAI(openai_api_key=st.session_state["OPENAI_API_KEY"])
 
-st.set_page_config(page_title="🐠夜风习习", layout ="wide")
+st.set_page_config(page_title="Welcome to ASL", layout="wide")
 
-st.title("🤠小团团不能一刻没有你")
+st.title("🤠 Welcome to ASL")
 
 if "messages" not in st.session_state:
     st.session_state["messages"] = []
 
 if chat:
     with st.container():
-        st.header("Chat with GPT")
-
         for message in st.session_state["messages"]:
             if isinstance(message, HumanMessage):
                 with st.chat_message("user"):
