@@ -31,7 +31,8 @@ if chat:
             elif isinstance(message, AIMessage):
                 with st.chat_message("assistant"):
                     st.markdown(message.content)
-        prompt = st.chat_input("Type something...")
+        prompt = st.chat_input("萍萍主人有什么问题...")
+        st.write(prompt,prompt_l)
         if prompt:
             st.session_state["messages"].append(HumanMessage(content=prompt))
             with st.chat_message("user"):
