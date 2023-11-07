@@ -36,8 +36,7 @@ if chat:
             st.session_state["messages"].append(HumanMessage(content=prompt))
             with st.chat_message("user"):
                 st.markdown(prompt)
-            st.markdown(st.session_state["messages"])
-            ai_message = chat([HumanMessage(content=prompt_l)])
+            ai_message = chat([HumanMessage(content=prompt)])
             st.session_state["messages"].append(ai_message)
             with st.chat_message("assistant"):
                 st.markdown(ai_message.content)
