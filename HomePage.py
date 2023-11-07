@@ -32,11 +32,11 @@ if chat:
                 with st.chat_message("assistant"):
                     st.markdown(message.content)
         prompt = st.chat_input("Type something...")
-        st.write(prompt)
         if prompt:
             st.session_state["messages"].append(HumanMessage(content=prompt))
             with st.chat_message("user"):
                 st.markdown(prompt)
+            st.markdown(st.session_state["messages"])
             ai_message = chat([HumanMessage(content=prompt)])
             st.session_state["messages"].append(ai_message)
             with st.chat_message("assistant"):
