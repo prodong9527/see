@@ -32,13 +32,12 @@ if chat:
                 with st.chat_message("assistant"):
                     st.markdown(message.content)
         prompt = st.chat_input("萍萍主人有什么问题...")
-        st.write(prompt_l+prompt)
         if prompt:
             st.session_state["messages"].append(HumanMessage(content=prompt))
             with st.chat_message("user"):
                 st.markdown(prompt)
             st.markdown(st.session_state["messages"])
-            ai_message = chat([HumanMessage(content=prompt)])
+            ai_message = chat([HumanMessage(content=prompt_l)])
             st.session_state["messages"].append(ai_message)
             with st.chat_message("assistant"):
                 st.markdown(ai_message.content)
