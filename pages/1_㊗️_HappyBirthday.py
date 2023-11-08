@@ -29,5 +29,13 @@ for image_index in image_files:
 ### <span style="color:red">{md}</span>
 """,unsafe_allow_html=True)
     st.divider()
-    
+
+col1,col2 = st.columns(2)
+with col1:
+    st.image("1.jpg")
+    st.image("2.jpg")
+with col2:
+    st.image("3.jpg")
+    st.image("4.jpg")
+
 
