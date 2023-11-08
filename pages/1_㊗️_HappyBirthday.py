@@ -23,8 +23,8 @@ for image_index in image_files:
     
     # 显示图片
     st.image(image,use_column_width=True)
-    caption=image_index.split(".")[0]
-    st.markdown('''{caption}''', icon="👋🏾")
+    md=image_index.split(".")[0]
+    md
     st.divider()
     
 
