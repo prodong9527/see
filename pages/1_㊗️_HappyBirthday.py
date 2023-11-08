@@ -24,7 +24,7 @@ for image_index in image_files:
     # 显示图片
     st.image(image,use_column_width=True)
     md=image_index.split(".")[0]
-    md
+    
     st.markdown("""
 {md}""",unsafe_allow_html=True)
     st.divider()
