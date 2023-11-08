@@ -4,7 +4,7 @@ from PIL import Image
 
 st.set_page_config(page_title="幸福记忆", layout="wide")
 
-st.markdown("## 这里有永远留在我们记忆里的幸福 &mdash;\
+st.markdown("## 永远留在我们记忆里的幸福 &mdash;\
             :tulip::cherry_blossom::rose::hibiscus::sunflower::blossom:  " 
             )
 st.markdown("----------")
