@@ -29,8 +29,8 @@ for image_index in image_files:
 """,unsafe_allow_html=True)
     st.divider()
 
-on = st.toggle('click')
-if on:
+agree = st.checkbox('click')
+if agree:
     st.markdown('''
 ## 致亲爱的老婆：
 ## 祝你永远十八岁，不管几岁，快乐万岁！
