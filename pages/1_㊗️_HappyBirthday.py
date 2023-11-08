@@ -29,10 +29,13 @@ for image_index in image_files:
 """,unsafe_allow_html=True)
     st.divider()
 
-txt = st.text_area('''
-致亲爱的老婆：
-祝你永远十八岁，不管几岁，快乐万岁！
-''' )
+on = st.toggle('click')
+if on:
+    st.markdown('''
+## 致亲爱的老婆：
+## 祝你永远十八岁，不管几岁，快乐万岁！
+''')
+
 col1,col2 = st.columns(2)
 with col1:
     st.image("1.jpg")
