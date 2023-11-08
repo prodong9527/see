@@ -25,7 +25,7 @@ for image_index in image_files:
     st.image(image,use_column_width=True)
     md=image_index.split(".")[0]
     
-    st.markdown(f"""
+    st.markdown(f"""👪
 ### <span style="color:red">{md}</span>
 """,unsafe_allow_html=True)
     st.divider()

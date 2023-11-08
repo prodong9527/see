@@ -41,6 +41,6 @@ if chat:
                 st.markdown(ai_message.content)
 else:
     with st.container():
-        st.warning("萍萍主人，请到[APIkey页面]💝一下再回来")
+        st.warning("萍萍主人，请到[APIkey页面]点💝💝💝再回来")
 
         
