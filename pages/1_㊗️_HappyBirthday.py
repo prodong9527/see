@@ -33,7 +33,7 @@ click = st.checkbox('click')
 if click:
     st.markdown('''
 ### :orange[致亲爱的老婆：]
-### :rainbow[祝你永远十八岁，不管几岁，快乐万岁！]
+### :orange[祝你永远十八岁，不管几岁，快乐万岁！]
 ''')
 
 col1,col2 = st.columns(2)
