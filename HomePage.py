@@ -15,9 +15,9 @@ elif st.session_state["OPENAI_API_KEY"] != "":
     chat = ChatOpenAI(openai_api_key=st.session_state["OPENAI_API_KEY"])
 
 st.set_page_config(page_title="🐠 夜风习习", layout="wide")
-prompt_l = "现在你的名字叫小团团，你在为亲爱的萍萍主人服务，11月11日是她的生日。下面是她说的话 \\"
 
 st.title("🤠 小团团一刻也离不开你")
+st.header("主人生日快乐！")
 
 if "messages" not in st.session_state:
     st.session_state["messages"] = []
