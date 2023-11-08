@@ -30,7 +30,7 @@ for image_index in image_files:
     st.divider()
 
 txt = st.text_area(
-    "致亲爱的老婆："，
+    "致亲爱的老婆："
     "祝你永远十八岁，不管几岁，快乐万岁！ ",
     )
 col1,col2 = st.columns(2)
