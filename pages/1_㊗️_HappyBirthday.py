@@ -25,11 +25,14 @@ for image_index in image_files:
     st.image(image,use_column_width=True)
     md=image_index.split(".")[0]
     
-    st.markdown(f"""👪
-### <span style="color:red">{md}</span>
+    st.markdown(f"""### 👪<span style="color:red">{md}</span>
 """,unsafe_allow_html=True)
     st.divider()
 
+txt = st.text_area(
+    "致亲爱的老婆："，
+    "祝你永远十八岁，不管几岁，快乐万岁！ ",
+    )
 col1,col2 = st.columns(2)
 with col1:
     st.image("1.jpg")
