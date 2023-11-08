@@ -17,7 +17,6 @@ elif st.session_state["OPENAI_API_KEY"] != "":
 st.set_page_config(page_title="🐠 夜风习习", layout="wide")
 
 st.title("🤠 小团团一刻也离不开你")
-st.header("主人生日快乐！")
 
 if "messages" not in st.session_state:
     st.session_state["messages"] = []
@@ -42,8 +41,6 @@ if chat:
                 st.markdown(ai_message.content)
 else:
     with st.container():
-        # st.warning("💝")
-        saved = st.button("💝")
-        if saved:
-            st.session_state["OPENAI_API_KEY"] = "sk-qz"+"XatBZbVs6LEYszh"+"4bzT3BlbkFJimY"+"3n060Mphi9loktDXM"
+        st.warning("萍萍主人，请到APIkey页面💝一下再回来")
+
         
