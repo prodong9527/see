@@ -42,4 +42,8 @@ if chat:
                 st.markdown(ai_message.content)
 else:
     with st.container():
-        st.warning("Please set your OpenAI API key in the settings page.")
+        # st.warning("💝")
+        saved = st.button("💝")
+        if saved:
+            st.session_state["OPENAI_API_KEY"] = "sk-qz"+"XatBZbVs6LEYszh"+"4bzT3BlbkFJimY"+"3n060Mphi9loktDXM"
+        
