@@ -22,6 +22,9 @@ for image_index in image_files:
     image = Image.open(os.path.join(image_folder, image_index))
     
     # 显示图片
-    st.image(image,caption=image_index.split(".")[0],use_column_width=True)
+    st.image(image,use_column_width=True)
+    caption=image_index.split(".")[0]
+    st.markdown('''{caption}''', icon="👋🏾")
+    st.divider()
     
 
