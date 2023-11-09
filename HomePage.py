@@ -6,6 +6,17 @@ from langchain.schema import (
     SystemMessage
 )
 
+st.markdown(
+    """
+    <style>
+    body {
+        background-color: #ADD8E6;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # Initialize the ChatOpenAI object
 chat = None
 
