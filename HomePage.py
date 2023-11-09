@@ -47,6 +47,7 @@ with st.sidebar:
     click = st.checkbox('萍萍click')
     if click:
         st.markdown('''
-### :orange[致亲爱的老婆：]
-### :orange[祝你永远十八岁，不管几岁，快乐万岁！]
+### :orange[亲爱的老婆]
+### :orange[祝你永远十八岁!]
+### :orange[不管几岁，快乐万岁！]
 ''')
