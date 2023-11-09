@@ -29,13 +29,7 @@ for image_index in image_files:
 """,unsafe_allow_html=True)
     st.divider()
 
-click = st.checkbox('click')
-if click:
-    st.markdown('''
-### :orange[致亲爱的老婆：]
-### :orange[祝你永远十八岁，不管几岁，快乐万岁！]
-''')
-
+st.caption("接下来请欣赏AI作品")
 col1,col2 = st.columns(2)
 with col1:
     st.image("1.jpg")
@@ -44,4 +38,4 @@ with col2:
     st.image("3.jpg")
     st.image("4.jpg")
 
-st.write('知道不咋地，星火大模型尽了😵‍💫')
+st.write('知道不咋地，星火大模型尽力了😵‍💫')
